@@ -1,0 +1,13 @@
+def caesar_decrypt(cipher, shift):
+    decrypted = ""
+    for char in cipher:
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            decrypted += chr((ord(char) - base - shift) % 26 + base)
+        else:
+            decrypted += char
+    return decrypted
+cipher_text = "KHOOR"
+shift = 3
+original_text = caesar_decrypt(cipher_text, shift)
+print("Decrypted:", original_text)
