@@ -1,0 +1,16 @@
+def caesar_decrypt(cipher_text, shift):
+    result = ""
+    for char in cipher_text:
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            # نرجّع الحرف للخلف بمقدار shift
+            result += chr((ord(char) - base - shift) % 26 + base)
+        else:
+            result += char
+    return result
+
+# مثال:
+cipher = "KHOOR, ZRUOG!"  # هذا النص المشفّر
+shift = 3
+original = caesar_decrypt(cipher, shift)
+print("النص الأصلي:", original)
