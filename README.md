@@ -10,6 +10,8 @@ def caesar_encrypt(text, shift):
 
 def caesar_decrypt(cipher, shift):
     return caesar_encrypt(cipher, -shift)
+
+# تجربة
 plain_text = "Hello, World!"
 shift_amount = 3
 
@@ -17,4 +19,4 @@ cipher_text = caesar_encrypt(plain_text, shift_amount)
 print("Encrypted:", cipher_text)
 
 decrypted_text = caesar_decrypt(cipher_text, shift_amount)
-print("Decrypted:", decrypted_text)# Encryption
+print("Decrypted:", decrypted_text)
